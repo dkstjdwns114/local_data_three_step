@@ -34,9 +34,10 @@ def accommodation_close():
     ulsan = theoremLocalDataLocationClose19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -97,9 +98,10 @@ def accommodation_open():
     ulsan = theoremLocalDataLocationOpen19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -160,9 +162,10 @@ def animal_close():
     ulsan = theoremLocalDataLocationClose19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -223,9 +226,10 @@ def animal_open():
     ulsan = theoremLocalDataLocationOpen19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -286,9 +290,10 @@ def animal_husbandry_close():
     ulsan = theoremLocalDataLocationClose19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -349,9 +354,10 @@ def animal_husbandry_open():
     ulsan = theoremLocalDataLocationOpen19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -412,9 +418,10 @@ def bathhouse_close():
     ulsan = theoremLocalDataLocationClose19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -475,9 +482,10 @@ def bathhouse_open():
     ulsan = theoremLocalDataLocationOpen19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -538,9 +546,10 @@ def cigarette_close():
     ulsan = theoremLocalDataLocationClose19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -601,9 +610,10 @@ def cigarette_open():
     ulsan = theoremLocalDataLocationOpen19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -664,9 +674,10 @@ def civil_defense_close():
     ulsan = theoremLocalDataLocationClose19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -727,9 +738,10 @@ def civil_defense_open():
     ulsan = theoremLocalDataLocationOpen19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -790,9 +802,10 @@ def cultural_planning_close():
     ulsan = theoremLocalDataLocationClose19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -853,9 +866,10 @@ def cultural_planning_open():
     ulsan = theoremLocalDataLocationOpen19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -916,9 +930,10 @@ def distribution_close():
     ulsan = theoremLocalDataLocationClose19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -979,9 +994,10 @@ def distribution_open():
     ulsan = theoremLocalDataLocationOpen19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -1042,9 +1058,10 @@ def educational_institutions_close():
     ulsan = theoremLocalDataLocationClose19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -1105,9 +1122,10 @@ def educational_institutions_open():
     ulsan = theoremLocalDataLocationOpen19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -1168,9 +1186,10 @@ def elevator_close():
     ulsan = theoremLocalDataLocationClose19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -1231,9 +1250,10 @@ def elevator_open():
     ulsan = theoremLocalDataLocationOpen19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -1294,9 +1314,10 @@ def energy_close():
     ulsan = theoremLocalDataLocationClose19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -1357,9 +1378,10 @@ def energy_open():
     ulsan = theoremLocalDataLocationOpen19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -1420,9 +1442,10 @@ def entertainment_bar_close():
     ulsan = theoremLocalDataLocationClose19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -1483,9 +1506,10 @@ def entertainment_bar_open():
     ulsan = theoremLocalDataLocationOpen19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -1546,9 +1570,10 @@ def environmental_management_close():
     ulsan = theoremLocalDataLocationClose19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -1609,9 +1634,10 @@ def environmental_management_open():
     ulsan = theoremLocalDataLocationOpen19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -1672,9 +1698,10 @@ def food_close():
     ulsan = theoremLocalDataLocationClose19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -1735,9 +1762,10 @@ def food_open():
     ulsan = theoremLocalDataLocationOpen19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -1798,9 +1826,10 @@ def funeral_close():
     ulsan = theoremLocalDataLocationClose19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -1861,9 +1890,10 @@ def funeral_open():
     ulsan = theoremLocalDataLocationOpen19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -1924,9 +1954,10 @@ def game_close():
     ulsan = theoremLocalDataLocationClose19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -1987,9 +2018,10 @@ def game_open():
     ulsan = theoremLocalDataLocationOpen19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -2050,9 +2082,10 @@ def groundwater_close():
     ulsan = theoremLocalDataLocationClose19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -2092,7 +2125,7 @@ def groundwater_close():
 
 
 def groundwater_open():
-    data = localData19['game_open']
+    data = localData19['groundwater_open']
     culture = theoremLocalDataOpen19.environment
     busan = theoremLocalDataLocationOpen19.busan
     chungbuk = theoremLocalDataLocationOpen19.chungbuk
@@ -2113,9 +2146,10 @@ def groundwater_open():
     ulsan = theoremLocalDataLocationOpen19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -2176,9 +2210,10 @@ def health_close():
     ulsan = theoremLocalDataLocationClose19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -2239,9 +2274,10 @@ def health_open():
     ulsan = theoremLocalDataLocationOpen19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -2302,9 +2338,10 @@ def karaoke_close():
     ulsan = theoremLocalDataLocationClose19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -2365,9 +2402,10 @@ def karaoke_open():
     ulsan = theoremLocalDataLocationOpen19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -2428,9 +2466,10 @@ def laundry_close():
     ulsan = theoremLocalDataLocationClose19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -2491,9 +2530,10 @@ def laundry_open():
     ulsan = theoremLocalDataLocationOpen19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -2554,9 +2594,10 @@ def logistics_close():
     ulsan = theoremLocalDataLocationClose19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -2617,9 +2658,10 @@ def logistics_open():
     ulsan = theoremLocalDataLocationOpen19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -2680,9 +2722,10 @@ def media_close():
     ulsan = theoremLocalDataLocationClose19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -2743,9 +2786,10 @@ def media_open():
     ulsan = theoremLocalDataLocationOpen19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -2806,9 +2850,10 @@ def movie_close():
     ulsan = theoremLocalDataLocationClose19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -2869,9 +2914,10 @@ def movie_open():
     ulsan = theoremLocalDataLocationOpen19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -2932,9 +2978,10 @@ def music_close():
     ulsan = theoremLocalDataLocationClose19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -2995,9 +3042,10 @@ def music_open():
     ulsan = theoremLocalDataLocationOpen19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -3058,9 +3106,10 @@ def office_support_close():
     ulsan = theoremLocalDataLocationClose19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -3121,9 +3170,10 @@ def office_support_open():
     ulsan = theoremLocalDataLocationOpen19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -3184,9 +3234,10 @@ def physical_education_close():
     ulsan = theoremLocalDataLocationClose19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -3247,9 +3298,10 @@ def physical_education_open():
     ulsan = theoremLocalDataLocationOpen19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -3310,9 +3362,10 @@ def salon_close():
     ulsan = theoremLocalDataLocationClose19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -3373,9 +3426,10 @@ def salon_open():
     ulsan = theoremLocalDataLocationOpen19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -3436,9 +3490,10 @@ def school_meals_close():
     ulsan = theoremLocalDataLocationClose19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -3499,9 +3554,10 @@ def school_meals_open():
     ulsan = theoremLocalDataLocationOpen19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -3562,9 +3618,10 @@ def show_close():
     ulsan = theoremLocalDataLocationClose19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -3625,9 +3682,10 @@ def show_open():
     ulsan = theoremLocalDataLocationOpen19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -3688,9 +3746,10 @@ def tourism_close():
     ulsan = theoremLocalDataLocationClose19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -3751,9 +3810,10 @@ def tourism_open():
     ulsan = theoremLocalDataLocationOpen19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -3814,9 +3874,10 @@ def travel_close():
     ulsan = theoremLocalDataLocationClose19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -3877,9 +3938,10 @@ def travel_open():
     ulsan = theoremLocalDataLocationOpen19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -3940,9 +4002,10 @@ def video_close():
     ulsan = theoremLocalDataLocationClose19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -4003,9 +4066,10 @@ def video_open():
     ulsan = theoremLocalDataLocationOpen19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -4066,9 +4130,10 @@ def wood_close():
     ulsan = theoremLocalDataLocationClose19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -4129,9 +4194,10 @@ def wood_open():
     ulsan = theoremLocalDataLocationOpen19.ulsan
 
     cnt = 0
+    total_cnt = data.count_documents({})
     for store in data.find({}).batch_size(1):
         cnt += 1
-        print(cnt, "/", data.count_documents({}), store)
+        print(cnt, "/", total_cnt)
         insert_data = culture.insert_one(store)
 
         if store['address'].split(' ')[0] == "부산광역시":
@@ -4170,7 +4236,135 @@ def wood_open():
             insert_data = ulsan.insert_one(store)
 
 
-'''
+def restaurant_close():
+    data = localData19['restaurant_close']
+    culture = theoremLocalDataClose19.food
+    busan = theoremLocalDataLocationClose19.busan
+    chungbuk = theoremLocalDataLocationClose19.chungbuk
+    chungnam = theoremLocalDataLocationClose19.chungnam
+    daegu = theoremLocalDataLocationClose19.daegu
+    daejeon = theoremLocalDataLocationClose19.daejeon
+    gangwon = theoremLocalDataLocationClose19.gangwon
+    gwangju = theoremLocalDataLocationClose19.gwangju
+    gyeonggi = theoremLocalDataLocationClose19.gyeonggi
+    gyeongbuk = theoremLocalDataLocationClose19.gyeongbuk
+    gyeongnam = theoremLocalDataLocationClose19.gyeongnam
+    incheon = theoremLocalDataLocationClose19.incheon
+    jeju = theoremLocalDataLocationClose19.jeju
+    jeonbuk = theoremLocalDataLocationClose19.jeonbuk
+    jeonnam = theoremLocalDataLocationClose19.jeonnam
+    sejong = theoremLocalDataLocationClose19.sejong
+    seoul = theoremLocalDataLocationClose19.seoul
+    ulsan = theoremLocalDataLocationClose19.ulsan
+
+    cnt = 0
+    total_cnt = data.count_documents({})
+    for store in data.find({}).batch_size(1):
+        cnt += 1
+        print(cnt, "/", total_cnt)
+        insert_data = culture.insert_one(store)
+
+        if store['address'].split(' ')[0] == "부산광역시":
+            insert_data = busan.insert_one(store)
+        elif store['address'].split(' ')[0] == "충청북도":
+            insert_data = chungbuk.insert_one(store)
+        elif store['address'].split(' ')[0] == "충청남도":
+            insert_data = chungnam.insert_one(store)
+        elif store['address'].split(' ')[0] == "대구광역시":
+            insert_data = daegu.insert_one(store)
+        elif store['address'].split(' ')[0] == "대전광역시":
+            insert_data = daejeon.insert_one(store)
+        elif store['address'].split(' ')[0] == "강원도":
+            insert_data = gangwon.insert_one(store)
+        elif store['address'].split(' ')[0] == "광주광역시":
+            insert_data = gwangju.insert_one(store)
+        elif store['address'].split(' ')[0] == "경기도":
+            insert_data = gyeonggi.insert_one(store)
+        elif store['address'].split(' ')[0] == "경상북도":
+            insert_data = gyeongbuk.insert_one(store)
+        elif store['address'].split(' ')[0] == "경상남도":
+            insert_data = gyeongnam.insert_one(store)
+        elif store['address'].split(' ')[0] == "인천광역시":
+            insert_data = incheon.insert_one(store)
+        elif store['address'].split(' ')[0] == "제주특별자치도":
+            insert_data = jeju.insert_one(store)
+        elif store['address'].split(' ')[0] == "전라북도":
+            insert_data = jeonbuk.insert_one(store)
+        elif store['address'].split(' ')[0] == "전라남도":
+            insert_data = jeonnam.insert_one(store)
+        elif store['address'].split(' ')[0] == "세종특별자치시":
+            insert_data = sejong.insert_one(store)
+        elif store['address'].split(' ')[0] == "서울특별시":
+            insert_data = seoul.insert_one(store)
+        elif store['address'].split(' ')[0] == "울산광역시":
+            insert_data = ulsan.insert_one(store)
+
+
+def restaurant_open():
+    data = localData19['restaurant_open']
+    culture = theoremLocalDataOpen19.food
+    busan = theoremLocalDataLocationOpen19.busan
+    chungbuk = theoremLocalDataLocationOpen19.chungbuk
+    chungnam = theoremLocalDataLocationOpen19.chungnam
+    daegu = theoremLocalDataLocationOpen19.daegu
+    daejeon = theoremLocalDataLocationOpen19.daejeon
+    gangwon = theoremLocalDataLocationOpen19.gangwon
+    gwangju = theoremLocalDataLocationOpen19.gwangju
+    gyeonggi = theoremLocalDataLocationOpen19.gyeonggi
+    gyeongbuk = theoremLocalDataLocationOpen19.gyeongbuk
+    gyeongnam = theoremLocalDataLocationOpen19.gyeongnam
+    incheon = theoremLocalDataLocationOpen19.incheon
+    jeju = theoremLocalDataLocationOpen19.jeju
+    jeonbuk = theoremLocalDataLocationOpen19.jeonbuk
+    jeonnam = theoremLocalDataLocationOpen19.jeonnam
+    sejong = theoremLocalDataLocationOpen19.sejong
+    seoul = theoremLocalDataLocationOpen19.seoul
+    ulsan = theoremLocalDataLocationOpen19.ulsan
+
+    cnt = 0
+    total_cnt = data.count_documents({})
+    for store in data.find({}).batch_size(1):
+        cnt += 1
+        print(cnt, "/", total_cnt)
+        insert_data = culture.insert_one(store)
+
+        if store['address'].split(' ')[0] == "부산광역시":
+            insert_data = busan.insert_one(store)
+        elif store['address'].split(' ')[0] == "충청북도":
+            insert_data = chungbuk.insert_one(store)
+        elif store['address'].split(' ')[0] == "충청남도":
+            insert_data = chungnam.insert_one(store)
+        elif store['address'].split(' ')[0] == "대구광역시":
+            insert_data = daegu.insert_one(store)
+        elif store['address'].split(' ')[0] == "대전광역시":
+            insert_data = daejeon.insert_one(store)
+        elif store['address'].split(' ')[0] == "강원도":
+            insert_data = gangwon.insert_one(store)
+        elif store['address'].split(' ')[0] == "광주광역시":
+            insert_data = gwangju.insert_one(store)
+        elif store['address'].split(' ')[0] == "경기도":
+            insert_data = gyeonggi.insert_one(store)
+        elif store['address'].split(' ')[0] == "경상북도":
+            insert_data = gyeongbuk.insert_one(store)
+        elif store['address'].split(' ')[0] == "경상남도":
+            insert_data = gyeongnam.insert_one(store)
+        elif store['address'].split(' ')[0] == "인천광역시":
+            insert_data = incheon.insert_one(store)
+        elif store['address'].split(' ')[0] == "제주특별자치도":
+            insert_data = jeju.insert_one(store)
+        elif store['address'].split(' ')[0] == "전라북도":
+            insert_data = jeonbuk.insert_one(store)
+        elif store['address'].split(' ')[0] == "전라남도":
+            insert_data = jeonnam.insert_one(store)
+        elif store['address'].split(' ')[0] == "세종특별자치시":
+            insert_data = sejong.insert_one(store)
+        elif store['address'].split(' ')[0] == "서울특별시":
+            insert_data = seoul.insert_one(store)
+        elif store['address'].split(' ')[0] == "울산광역시":
+            insert_data = ulsan.insert_one(store)
+
+
+
 if __name__ == "__main__":
     p1 = Process(target=accommodation_close)
     p2 = Process(target=accommodation_open)
@@ -4238,6 +4432,8 @@ if __name__ == "__main__":
     p64 = Process(target=video_open)
     p65 = Process(target=wood_close)
     p66 = Process(target=wood_open)
+    p67 = Process(target=restaurant_close)
+    p68 = Process(target=restaurant_open)
 
     p1.start()
     p2.start()
@@ -4305,6 +4501,8 @@ if __name__ == "__main__":
     p64.start()
     p65.start()
     p66.start()
+    p67.start()
+    p68.start()
 
     p1.join()
     p2.join()
@@ -4372,4 +4570,5 @@ if __name__ == "__main__":
     p64.join()
     p65.join()
     p66.join()
-'''
+    p67.join()
+    p68.join()
