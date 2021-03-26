@@ -20,4 +20,4 @@ def data():
         cluster_collection.insert_one(store)
 
 
-# data()
+data()

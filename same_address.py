@@ -587,7 +587,6 @@ def ulsan():
             print(cnt, "/", total_cnt, same_address)
 
 
-
 if __name__ == "__main__":
     p1 = Process(target=busan)
     p2 = Process(target=chungbuk)

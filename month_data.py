@@ -1139,7 +1139,6 @@ def data():
             dec_open_cnt_20 += 1
             print("dec_open_cnt_20", dec_open_cnt_20)
 
-    '''
     my_api = {
         "title": "Month data",
         "month_close_19": [
@@ -1492,7 +1491,6 @@ def data():
 
     my_api_id = local_main_api.insert_one(my_api).inserted_id
     print(my_api_id)
-    '''
 
 
 data()
