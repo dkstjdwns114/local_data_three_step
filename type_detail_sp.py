@@ -759,11 +759,6 @@ def data():
                         "count": environment_groundwater_close_19_cnt
                     },
                     {
-                        "type": "culture_planning",
-                        "kor_type": "문화기획",
-                        "count": culture_culture_planning_close_19_cnt
-                    },
-                    {
                         "type": "environment_management",
                         "kor_type": "환경관리",
                         "count": environment_environment_management_close_19_cnt
@@ -981,11 +976,6 @@ def data():
                         "type": "groundwater",
                         "kor_type": "지하수",
                         "count": environment_groundwater_open_19_cnt
-                    },
-                    {
-                        "type": "culture_planning",
-                        "kor_type": "문화기획",
-                        "count": culture_culture_planning_open_19_cnt
                     },
                     {
                         "type": "environment_management",
@@ -1207,11 +1197,6 @@ def data():
                         "count": environment_groundwater_close_20_cnt
                     },
                     {
-                        "type": "culture_planning",
-                        "kor_type": "문화기획",
-                        "count": culture_culture_planning_close_20_cnt
-                    },
-                    {
                         "type": "environment_management",
                         "kor_type": "환경관리",
                         "count": environment_environment_management_close_20_cnt
@@ -1429,11 +1414,6 @@ def data():
                         "type": "groundwater",
                         "kor_type": "지하수",
                         "count": environment_groundwater_open_20_cnt
-                    },
-                    {
-                        "type": "culture_planning",
-                        "kor_type": "문화기획",
-                        "count": culture_culture_planning_open_20_cnt
                     },
                     {
                         "type": "environment_management",
