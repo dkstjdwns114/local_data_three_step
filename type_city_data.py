@@ -22,13 +22,13 @@ def data():
     other_close_19 = theoremLocalDataClose19['other']
 
     # 19년 업종별 개업
-    animal_open_19 = theoremLocalDataClose19['animal']
-    culture_open_19 = theoremLocalDataClose19['culture']
-    environment_open_19 = theoremLocalDataClose19['environment']
-    food_open_19 = theoremLocalDataClose19['food']
-    health_open_19 = theoremLocalDataClose19['health']
-    life_open_19 = theoremLocalDataClose19['life']
-    other_open_19 = theoremLocalDataClose19['other']
+    animal_open_19 = theoremLocalDataOpen19['animal']
+    culture_open_19 = theoremLocalDataOpen19['culture']
+    environment_open_19 = theoremLocalDataOpen19['environment']
+    food_open_19 = theoremLocalDataOpen19['food']
+    health_open_19 = theoremLocalDataOpen19['health']
+    life_open_19 = theoremLocalDataOpen19['life']
+    other_open_19 = theoremLocalDataOpen19['other']
 
     # 20년 업종별 폐업
     animal_close_20 = theoremLocalDataClose20['animal']
@@ -40,13 +40,13 @@ def data():
     other_close_20 = theoremLocalDataClose20['other']
 
     # 20년 업종별 개업
-    animal_open_20 = theoremLocalDataClose20['animal']
-    culture_open_20 = theoremLocalDataClose20['culture']
-    environment_open_20 = theoremLocalDataClose20['environment']
-    food_open_20 = theoremLocalDataClose20['food']
-    health_open_20 = theoremLocalDataClose20['health']
-    life_open_20 = theoremLocalDataClose20['life']
-    other_open_20 = theoremLocalDataClose20['other']
+    animal_open_20 = theoremLocalDataOpen20['animal']
+    culture_open_20 = theoremLocalDataOpen20['culture']
+    environment_open_20 = theoremLocalDataOpen20['environment']
+    food_open_20 = theoremLocalDataOpen20['food']
+    health_open_20 = theoremLocalDataOpen20['health']
+    life_open_20 = theoremLocalDataOpen20['life']
+    other_open_20 = theoremLocalDataOpen20['other']
 
     # 지역별 업종 close 19
     busan_animal_close_19_cnt = 0
@@ -1356,7 +1356,7 @@ def data():
     other_open_19_tot_cnt = other_open_19.count_documents({})
     for store in other_open_19.find({}).batch_size(1):
         other_open_19_cnt += 1
-        print(other_open_19_cnt, "/", other_open_19.count_documents({}))
+        print(other_open_19_cnt, "/", other_open_19_tot_cnt)
 
         if store['address'].split(' ')[0] == "부산광역시":
             busan_other_open_19_cnt += 1
@@ -1822,7 +1822,7 @@ def data():
     animal_open_20_tot_cnt = animal_open_20.count_documents({})
     for store in animal_open_20.find({}).batch_size(1):
         animal_open_20_cnt += 1
-        print(animal_open_20_cnt, "/", animal_open_20.count_documents({}))
+        print(animal_open_20_cnt, "/", animal_open_20_tot_cnt)
 
         if store['address'].split(' ')[0] == "부산광역시":
             busan_animal_open_20_cnt += 1
