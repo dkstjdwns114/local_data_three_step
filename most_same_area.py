@@ -243,7 +243,7 @@ def nationwide_top10():
         "chungnam": chungnam_sort_word,
         "daegu": daegu_sort_word,
         "daejeon": daejeon_sort_word,
-        "gangwon_": gangwon_sort_word,
+        "gangwon": gangwon_sort_word,
         "gwangju": gwangju_sort_word,
         "gyeonggi": gyeonggi_sort_word,
         "gyeongbuk": gyeongbuk_sort_word,
