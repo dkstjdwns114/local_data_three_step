@@ -1,5 +1,7 @@
 import csv
 from multiprocessing import Process
+
+from bson import ObjectId
 from pymongo import MongoClient
 
 client = MongoClient("localhost", 27017)
@@ -29,10 +31,10 @@ def seoul_busan():
 
                 if local_address == rdnmAdr:
                     cnt += 1
-                    print(cnt, result, local)
+                    print(cnt, result[37], result[38], local)
+                    same_address.update_one({"_id": ObjectId(local['_id'])}, {"$set": {"lon": result[37]}})
+                    same_address.update_one({"_id": ObjectId(local['_id'])}, {"$set": {"lat": result[38]}})
                     break
-
-
 
 
 seoul_busan()
