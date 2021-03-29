@@ -153,3 +153,5 @@ crashlytics-build.properties
 fabric.properties
 
 LOCALDATA_ALL_CSV
+
+prev_csv_data
