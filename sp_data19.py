@@ -4364,7 +4364,6 @@ def restaurant_open():
             insert_data = ulsan.insert_one(store)
 
 
-
 if __name__ == "__main__":
     p1 = Process(target=accommodation_close)
     p2 = Process(target=accommodation_open)
