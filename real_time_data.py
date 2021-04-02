@@ -55,6 +55,7 @@ def close(yesterday_str, today_str):
             cnt += 1
             city_name = ""
             category_name = ""
+            category_kor = ""
             city_split = ""
             if item['rdnWhlAddr']:
                 city_split = item['rdnWhlAddr'].split(' ')[0]
@@ -102,18 +103,25 @@ def close(yesterday_str, today_str):
 
             if open_service_id_split == "01":
                 category_name = "health"
+                category_kor = "건강"
             elif open_service_id_split == "02":
                 category_name = "animal"
+                category_kor = "동물"
             elif open_service_id_split == "03" or open_service_id_split == "04":
                 category_name = "culture"
+                category_kor = "문화"
             elif open_service_id_split == "05" or open_service_id_split == "06" or open_service_id_split == "08" or open_service_id_split == "10":
                 category_name = "life"
+                category_kor = "생활"
             elif open_service_id_split == "07":
                 category_name = "food"
+                category_kor = "식품"
             elif open_service_id_split == "09":
                 category_name = "environment"
+                category_kor = "환경"
             elif open_service_id_split == "11":
                 category_name = "other"
+                category_kor = "기타"
 
             info = {
                 "data": "close",
@@ -129,6 +137,7 @@ def close(yesterday_str, today_str):
                 "detailed_classification": item['uptaeNm'],
                 "city_name": city_name,
                 "category_name": category_name,
+                "category_kor": category_kor,
             }
             print(cnt, "close", info)
             local_real_time_close_id = local_realtime_close.insert_one(info).inserted_id
@@ -167,6 +176,7 @@ def today_open(yesterday_str):
             cnt += 1
             city_name = ""
             category_name = ""
+            category_kor = ""
             city_split = ""
             if item['rdnWhlAddr']:
                 city_split = item['rdnWhlAddr'].split(' ')[0]
@@ -214,18 +224,25 @@ def today_open(yesterday_str):
 
             if open_service_id_split == "01":
                 category_name = "health"
+                category_kor = "건강"
             elif open_service_id_split == "02":
                 category_name = "animal"
+                category_kor = "동물"
             elif open_service_id_split == "03" or open_service_id_split == "04":
                 category_name = "culture"
+                category_kor = "문화"
             elif open_service_id_split == "05" or open_service_id_split == "06" or open_service_id_split == "08" or open_service_id_split == "10":
                 category_name = "life"
+                category_kor = "생활"
             elif open_service_id_split == "07":
                 category_name = "food"
+                category_kor = "식품"
             elif open_service_id_split == "09":
                 category_name = "environment"
+                category_kor = "환경"
             elif open_service_id_split == "11":
                 category_name = "other"
+                category_kor = "기타"
 
             info = {
                 "data": "open",
@@ -241,6 +258,7 @@ def today_open(yesterday_str):
                 "detailed_classification": item['uptaeNm'],
                 "city_name": city_name,
                 "category_name": category_name,
+                "category_kor": category_kor,
             }
 
             print(cnt, "open", info)
