@@ -49,98 +49,99 @@ def close(yesterday_str, today_str):
 
     jsonObj = json.loads(jsonString)
 
-    cnt = 0
-    for item in jsonObj['rows']['row']:
-        if item['dcbYmd'] == yesterday_str:
-            cnt += 1
-            city_name = ""
-            category_name = ""
-            category_kor = ""
-            city_split = ""
-            if item['rdnWhlAddr']:
-                city_split = item['rdnWhlAddr'].split(' ')[0]
-                address = item['rdnWhlAddr']
-            else:
-                city_split = item['siteWhlAddr'].split(' ')[0]
-                address = item['siteWhlAddr']
+    if jsonObj['rows']:
+        cnt = 0
+        for item in jsonObj['rows']['row']:
+            if item['dcbYmd'] == yesterday_str:
+                cnt += 1
+                city_name = ""
+                category_name = ""
+                category_kor = ""
+                city_split = ""
+                if item['rdnWhlAddr']:
+                    city_split = item['rdnWhlAddr'].split(' ')[0]
+                    address = item['rdnWhlAddr']
+                else:
+                    city_split = item['siteWhlAddr'].split(' ')[0]
+                    address = item['siteWhlAddr']
 
-            if city_split == "부산광역시":
-                city_name = "busan"
-            elif city_split == "충청북도":
-                city_name = "chungbuk"
-            elif city_split == "충청남도":
-                city_name = "chungnam"
-            elif city_split == "대구광역시":
-                city_name = "daegu"
-            elif city_split == "대전광역시":
-                city_name = "daejeon"
-            elif city_split == "강원도":
-                city_name = "gangwon"
-            elif city_split == "광주광역시":
-                city_name = "gwangju"
-            elif city_split == "경기도":
-                city_name = "gyeonggi"
-            elif city_split == "경상북도":
-                city_name = "gyeongbuk"
-            elif city_split == "경상남도":
-                city_name = "gyeongnam"
-            elif city_split == "인천광역시":
-                city_name = "incheon"
-            elif city_split == "제주특별자치도":
-                city_name = "jeju"
-            elif city_split == "전라북도":
-                city_name = "jeonbuk"
-            elif city_split == "전라남도":
-                city_name = "jeonnam"
-            elif city_split == "세종특별자치시":
-                city_name = "sejong"
-            elif city_split == "서울특별시":
-                city_name = "seoul"
-            elif city_split == "울산광역시":
-                city_name = "ulsan"
+                if city_split == "부산광역시":
+                    city_name = "busan"
+                elif city_split == "충청북도":
+                    city_name = "chungbuk"
+                elif city_split == "충청남도":
+                    city_name = "chungnam"
+                elif city_split == "대구광역시":
+                    city_name = "daegu"
+                elif city_split == "대전광역시":
+                    city_name = "daejeon"
+                elif city_split == "강원도":
+                    city_name = "gangwon"
+                elif city_split == "광주광역시":
+                    city_name = "gwangju"
+                elif city_split == "경기도":
+                    city_name = "gyeonggi"
+                elif city_split == "경상북도":
+                    city_name = "gyeongbuk"
+                elif city_split == "경상남도":
+                    city_name = "gyeongnam"
+                elif city_split == "인천광역시":
+                    city_name = "incheon"
+                elif city_split == "제주특별자치도":
+                    city_name = "jeju"
+                elif city_split == "전라북도":
+                    city_name = "jeonbuk"
+                elif city_split == "전라남도":
+                    city_name = "jeonnam"
+                elif city_split == "세종특별자치시":
+                    city_name = "sejong"
+                elif city_split == "서울특별시":
+                    city_name = "seoul"
+                elif city_split == "울산광역시":
+                    city_name = "ulsan"
 
-            open_service_id_split = item['opnSvcId'][0:2]
+                open_service_id_split = item['opnSvcId'][0:2]
 
-            if open_service_id_split == "01":
-                category_name = "health"
-                category_kor = "건강"
-            elif open_service_id_split == "02":
-                category_name = "animal"
-                category_kor = "동물"
-            elif open_service_id_split == "03" or open_service_id_split == "04":
-                category_name = "culture"
-                category_kor = "문화"
-            elif open_service_id_split == "05" or open_service_id_split == "06" or open_service_id_split == "08" or open_service_id_split == "10":
-                category_name = "life"
-                category_kor = "생활"
-            elif open_service_id_split == "07":
-                category_name = "food"
-                category_kor = "식품"
-            elif open_service_id_split == "09":
-                category_name = "environment"
-                category_kor = "환경"
-            elif open_service_id_split == "11":
-                category_name = "other"
-                category_kor = "기타"
+                if open_service_id_split == "01":
+                    category_name = "health"
+                    category_kor = "건강"
+                elif open_service_id_split == "02":
+                    category_name = "animal"
+                    category_kor = "동물"
+                elif open_service_id_split == "03" or open_service_id_split == "04":
+                    category_name = "culture"
+                    category_kor = "문화"
+                elif open_service_id_split == "05" or open_service_id_split == "06" or open_service_id_split == "08" or open_service_id_split == "10":
+                    category_name = "life"
+                    category_kor = "생활"
+                elif open_service_id_split == "07":
+                    category_name = "food"
+                    category_kor = "식품"
+                elif open_service_id_split == "09":
+                    category_name = "environment"
+                    category_kor = "환경"
+                elif open_service_id_split == "11":
+                    category_name = "other"
+                    category_kor = "기타"
 
-            info = {
-                "data": "close",
-                "update_date": item['updateDt'],
-                "authorization_date": item['apvPermYmd'],
-                "closed_date": item['dcbYmd'],
-                "store_name": item['bplcNm'],
-                "address": address,
-                "state_code": item['trdStateGbn'],
-                "state": item['trdStateNm'],
-                "open_service_id": item['opnSvcId'],
-                "open_service": item['opnSvcNm'],
-                "detailed_classification": item['uptaeNm'],
-                "city_name": city_name,
-                "category_name": category_name,
-                "category_kor": category_kor,
-            }
-            print(cnt, "close", info)
-            local_real_time_close_id = local_realtime_close.insert_one(info).inserted_id
+                info = {
+                    "data": "close",
+                    "update_date": item['updateDt'],
+                    "authorization_date": item['apvPermYmd'],
+                    "closed_date": item['dcbYmd'],
+                    "store_name": item['bplcNm'],
+                    "address": address,
+                    "state_code": item['trdStateGbn'],
+                    "state": item['trdStateNm'],
+                    "open_service_id": item['opnSvcId'],
+                    "open_service": item['opnSvcNm'],
+                    "detailed_classification": item['uptaeNm'],
+                    "city_name": city_name,
+                    "category_name": category_name,
+                    "category_kor": category_kor,
+                }
+                print(cnt, "close", info)
+                local_real_time_close_id = local_realtime_close.insert_one(info).inserted_id
 
 
 def today_open(yesterday_str):
@@ -170,99 +171,100 @@ def today_open(yesterday_str):
 
     jsonObj = json.loads(jsonString)
 
-    cnt = 0
-    for item in jsonObj['rows']['row']:
-        if item['apvPermYmd'] == yesterday_str:
-            cnt += 1
-            city_name = ""
-            category_name = ""
-            category_kor = ""
-            city_split = ""
-            if item['rdnWhlAddr']:
-                city_split = item['rdnWhlAddr'].split(' ')[0]
-                address = item['rdnWhlAddr']
-            else:
-                city_split = item['siteWhlAddr'].split(' ')[0]
-                address = item['siteWhlAddr']
+    if jsonObj['rows']:
+        cnt = 0
+        for item in jsonObj['rows']['row']:
+            if item['apvPermYmd'] == yesterday_str:
+                cnt += 1
+                city_name = ""
+                category_name = ""
+                category_kor = ""
+                city_split = ""
+                if item['rdnWhlAddr']:
+                    city_split = item['rdnWhlAddr'].split(' ')[0]
+                    address = item['rdnWhlAddr']
+                else:
+                    city_split = item['siteWhlAddr'].split(' ')[0]
+                    address = item['siteWhlAddr']
 
-            if city_split == "부산광역시":
-                city_name = "busan"
-            elif city_split == "충청북도":
-                city_name = "chungbuk"
-            elif city_split == "충청남도":
-                city_name = "chungnam"
-            elif city_split == "대구광역시":
-                city_name = "daegu"
-            elif city_split == "대전광역시":
-                city_name = "daejeon"
-            elif city_split == "강원도":
-                city_name = "gangwon"
-            elif city_split == "광주광역시":
-                city_name = "gwangju"
-            elif city_split == "경기도":
-                city_name = "gyeonggi"
-            elif city_split == "경상북도":
-                city_name = "gyeongbuk"
-            elif city_split == "경상남도":
-                city_name = "gyeongnam"
-            elif city_split == "인천광역시":
-                city_name = "incheon"
-            elif city_split == "제주특별자치도":
-                city_name = "jeju"
-            elif city_split == "전라북도":
-                city_name = "jeonbuk"
-            elif city_split == "전라남도":
-                city_name = "jeonnam"
-            elif city_split == "세종특별자치시":
-                city_name = "sejong"
-            elif city_split == "서울특별시":
-                city_name = "seoul"
-            elif city_split == "울산광역시":
-                city_name = "ulsan"
+                if city_split == "부산광역시":
+                    city_name = "busan"
+                elif city_split == "충청북도":
+                    city_name = "chungbuk"
+                elif city_split == "충청남도":
+                    city_name = "chungnam"
+                elif city_split == "대구광역시":
+                    city_name = "daegu"
+                elif city_split == "대전광역시":
+                    city_name = "daejeon"
+                elif city_split == "강원도":
+                    city_name = "gangwon"
+                elif city_split == "광주광역시":
+                    city_name = "gwangju"
+                elif city_split == "경기도":
+                    city_name = "gyeonggi"
+                elif city_split == "경상북도":
+                    city_name = "gyeongbuk"
+                elif city_split == "경상남도":
+                    city_name = "gyeongnam"
+                elif city_split == "인천광역시":
+                    city_name = "incheon"
+                elif city_split == "제주특별자치도":
+                    city_name = "jeju"
+                elif city_split == "전라북도":
+                    city_name = "jeonbuk"
+                elif city_split == "전라남도":
+                    city_name = "jeonnam"
+                elif city_split == "세종특별자치시":
+                    city_name = "sejong"
+                elif city_split == "서울특별시":
+                    city_name = "seoul"
+                elif city_split == "울산광역시":
+                    city_name = "ulsan"
 
-            open_service_id_split = item['opnSvcId'][0:2]
+                open_service_id_split = item['opnSvcId'][0:2]
 
-            if open_service_id_split == "01":
-                category_name = "health"
-                category_kor = "건강"
-            elif open_service_id_split == "02":
-                category_name = "animal"
-                category_kor = "동물"
-            elif open_service_id_split == "03" or open_service_id_split == "04":
-                category_name = "culture"
-                category_kor = "문화"
-            elif open_service_id_split == "05" or open_service_id_split == "06" or open_service_id_split == "08" or open_service_id_split == "10":
-                category_name = "life"
-                category_kor = "생활"
-            elif open_service_id_split == "07":
-                category_name = "food"
-                category_kor = "식품"
-            elif open_service_id_split == "09":
-                category_name = "environment"
-                category_kor = "환경"
-            elif open_service_id_split == "11":
-                category_name = "other"
-                category_kor = "기타"
+                if open_service_id_split == "01":
+                    category_name = "health"
+                    category_kor = "건강"
+                elif open_service_id_split == "02":
+                    category_name = "animal"
+                    category_kor = "동물"
+                elif open_service_id_split == "03" or open_service_id_split == "04":
+                    category_name = "culture"
+                    category_kor = "문화"
+                elif open_service_id_split == "05" or open_service_id_split == "06" or open_service_id_split == "08" or open_service_id_split == "10":
+                    category_name = "life"
+                    category_kor = "생활"
+                elif open_service_id_split == "07":
+                    category_name = "food"
+                    category_kor = "식품"
+                elif open_service_id_split == "09":
+                    category_name = "environment"
+                    category_kor = "환경"
+                elif open_service_id_split == "11":
+                    category_name = "other"
+                    category_kor = "기타"
 
-            info = {
-                "data": "open",
-                "update_date": item['updateDt'],
-                "authorization_date": item['apvPermYmd'],
-                "closed_date": item['dcbYmd'],
-                "store_name": item['bplcNm'],
-                "address": item['rdnWhlAddr'],
-                "state_code": item['trdStateGbn'],
-                "state": item['trdStateNm'],
-                "open_service_id": item['opnSvcId'],
-                "open_service": item['opnSvcNm'],
-                "detailed_classification": item['uptaeNm'],
-                "city_name": city_name,
-                "category_name": category_name,
-                "category_kor": category_kor,
-            }
+                info = {
+                    "data": "open",
+                    "update_date": item['updateDt'],
+                    "authorization_date": item['apvPermYmd'],
+                    "closed_date": item['dcbYmd'],
+                    "store_name": item['bplcNm'],
+                    "address": item['rdnWhlAddr'],
+                    "state_code": item['trdStateGbn'],
+                    "state": item['trdStateNm'],
+                    "open_service_id": item['opnSvcId'],
+                    "open_service": item['opnSvcNm'],
+                    "detailed_classification": item['uptaeNm'],
+                    "city_name": city_name,
+                    "category_name": category_name,
+                    "category_kor": category_kor,
+                }
 
-            print(cnt, "open", info)
-            local_real_time_open_id = local_realtime_open.insert_one(info).inserted_id
+                print(cnt, "open", info)
+                local_real_time_open_id = local_realtime_open.insert_one(info).inserted_id
 
 
 if __name__ == "__main__":
