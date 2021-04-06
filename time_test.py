@@ -1,15 +1,17 @@
-from datetime import date, timedelta
-import time
+import datetime
 
-today_form = date.today()
-yesterday_form = date.today() - timedelta(1)
+now = datetime.datetime.now()
+print(now)  # 2018-07-28 12:11:32.669083
 
-today = today_form.strftime('%Y%m%d')
-yesterday = yesterday_form.strftime('%Y%m%d')
+nowDate = now.strftime('%Y-%m-%d')
+print(nowDate)  # 2018-07-28
 
-now = time.localtime()
+nowTime = now.strftime('%H:%M:%S')
+print(nowTime)  # 12:11:32
 
-print(today)
-print(yesterday)
+nowDatetime = now.strftime('%Y-%m-%d %H:%M:%S')
+print(nowDatetime)  # 2018-07-28 12:11:32
 
-print(now.tm_hour)
+nowHour = now.strftime('%H')
+
+print(nowHour)
