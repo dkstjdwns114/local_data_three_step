@@ -167,6 +167,10 @@ def today_open(yesterday_str):
 
     dict = xmltodict.parse(response_body)
 
+    jsonPaging = json.dumps(dict['result']['header']['paging'], ensure_ascii=False)
+
+    jsonPageObj = json.loads(jsonPaging)
+
     jsonString = json.dumps(dict['result']['body'], ensure_ascii=False)
 
     jsonObj = json.loads(jsonString)
@@ -174,6 +178,10 @@ def today_open(yesterday_str):
     if jsonObj['rows']:
         cnt = 0
         for item in jsonObj['rows']['row']:
+            isOne = False
+            if jsonPageObj['totalCount'] == '1':
+                isOne = True
+                item = jsonObj['rows']['row']
             if item['apvPermYmd'] == yesterday_str:
                 cnt += 1
                 city_name = ""
@@ -265,6 +273,8 @@ def today_open(yesterday_str):
 
                 print(cnt, "open", info)
                 local_real_time_open_id = local_realtime_open.insert_one(info).inserted_id
+                if isOne:
+                    break
 
 
 if __name__ == "__main__":
