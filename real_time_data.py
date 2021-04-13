@@ -52,7 +52,7 @@ def close(yesterday_str, today_str):
     if jsonObj['rows']:
         cnt = 0
         for item in jsonObj['rows']['row']:
-            if item['dcbYmd'] == yesterday_str:
+            if item['dcbYmd'] == yesterday_str or item['dcbYmd'] == '20210409':
                 cnt += 1
                 city_name = ""
                 category_name = ""
@@ -125,6 +125,7 @@ def close(yesterday_str, today_str):
                     category_kor = "기타"
 
                 info = {
+                    "mgtNo": item['mgtNo'],
                     "data": "close",
                     "update_date": item['updateDt'],
                     "authorization_date": item['apvPermYmd'],
@@ -255,6 +256,7 @@ def today_open(yesterday_str):
                     category_kor = "기타"
 
                 info = {
+                    "mgtNo": item['mgtNo'],
                     "data": "open",
                     "update_date": item['updateDt'],
                     "authorization_date": item['apvPermYmd'],
