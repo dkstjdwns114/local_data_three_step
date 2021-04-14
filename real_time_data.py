@@ -52,7 +52,7 @@ def close(yesterday_str, today_str):
     if jsonObj['rows']:
         cnt = 0
         for item in jsonObj['rows']['row']:
-            if item['dcbYmd'] == yesterday_str or item['dcbYmd'] == '20210409':
+            if item['dcbYmd'] == yesterday_str:
                 cnt += 1
                 city_name = ""
                 category_name = ""
