@@ -59,7 +59,7 @@ def close(today_str, day1_str, day2_str, day3_str, day4_str, day5_str, day6_str,
     queryParams = '?' + urlencode({
         quote_plus("authKey"): "uZ98I03VR/zZ3zAvdNIVEl8EWJy6llSwLtDAMDlOYkE=",
 
-        quote_plus("lastModTsBgn"): today_str,
+        quote_plus("lastModTsBgn"): day1_str,
 
         quote_plus("lastModTsEnd"): today_str,
 
@@ -185,7 +185,7 @@ def close(today_str, day1_str, day2_str, day3_str, day4_str, day5_str, day6_str,
     return cnt
 
 
-def today_open(day1_str, day2_str, day3_str, day4_str, day5_str, day6_str, day7_str):
+def today_open(day1_str, day7_str):
     queryParams = '?' + urlencode({
         quote_plus("authKey"): "uZ98I03VR/zZ3zAvdNIVEl8EWJy6llSwLtDAMDlOYkE=",
 
@@ -325,7 +325,7 @@ def today_open(day1_str, day2_str, day3_str, day4_str, day5_str, day6_str, day7_
 
 
 close_cnt = close(today, day1, day2, day3, day4, day5, day6, day7)
-# open_cnt = today_open(day1, day2, day3, day4, day5, day6, day7)
+open_cnt = today_open(day1, day7)
 
 # my_str = "개업: " + str(close_cnt) + "개, 폐업: " + str(open_cnt) + "개 데이터가 업데이트 되었습니다."
 
