@@ -1,28 +1,23 @@
-import firebase_admin
-from firebase_admin import credentials, messaging
+from pyfcm import FCMNotification
 
-cred = credentials.Certificate("./serviceAccountKey.json")
-firebase_admin.initialize_app(cred)
+APIKEY = "AAAAsLhtlp8:APA91bF7A7f_Rr0tBhpZmgBAzZ5wAIGifzAyMtLJgerJyR-uX6t6bdpjyZ6dNE1IDOk22wm3vItH9xx4mZwzzI_4lcbGBJ-ZBi8kHh9Cxwf_2Kb14SUAnDPkCFPZhHGEP-pdYEeucLfS"
+
+# 파이어베이스 콘솔에서 얻어 온 서버 키를 넣어 줌
+push_service = FCMNotification(APIKEY)
 
 
-def send_all():
-    registration_token = 'YOUR_REGISTRATION_TOKEN'
-    # [START send_all]
-    # Create a list containing up to 500 messages.
-    messages = [
-        messaging.Message(
-            notification=messaging.Notification('Price drop', '5% off all electronics'),
-            token=registration_token,
-        ),
-        # ...
-        messaging.Message(
-            notification=messaging.Notification('Price drop', '2% off all books'),
-            topic='readers-club',
-        ),
-    ]
+def sendMessage(body, title):
+    # 메시지 (data 타입)
+    data_message = {
+        "body": body,
+        "title": title
+    }
 
-    response = messaging.send_all(messages)
-    # See the BatchResponse reference documentation
-    # for the contents of response.
-    print('{0} messages were sent successfully'.format(response.success_count))
-    # [END send_all]
+    # topic을 이용해 다수의 구독자에게 푸시알림을 전송함
+    result = push_service.notify_topic_subscribers(topic_name="generalTopic", data_message=data_message)
+
+    # 전송 결과 출력
+    print(result)
+
+
+sendMessage("TEST Message", "데이터 업데이트 알림")
