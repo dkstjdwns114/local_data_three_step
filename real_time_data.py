@@ -174,7 +174,7 @@ def close(today_str, day1_str, day2_str, day3_str, day4_str, day5_str, day6_str,
                         "category_kor": category_kor,
                     }
                     print(cnt, "close", info)
-                    # local_real_time_close_id = local_realtime_close.insert_one(info).inserted_id
+                    local_real_time_close_id = local_realtime_close.insert_one(info).inserted_id
     return cnt
 
 
@@ -309,16 +309,16 @@ def today_open(day1_str, day7_str):
                 }
 
                 print(cnt, "open", info)
-                # local_real_time_open_id = local_realtime_open.insert_one(info).inserted_id
+                local_real_time_open_id = local_realtime_open.insert_one(info).inserted_id
                 if isOne:
                     break
     return cnt
 
 
-# close_cnt = close(today, day1, day2, day3, day4, day5, day6, day7)
+close_cnt = close(today, day1, day2, day3, day4, day5, day6, day7)
 open_cnt = today_open(day1, day7)
 
-# my_str = "개업: " + str(close_cnt) + "개, 폐업: " + str(open_cnt) + "개 데이터가 업데이트 되었습니다."
+my_str = "개업: " + str(close_cnt) + "개, 폐업: " + str(open_cnt) + "개 데이터가 업데이트 되었습니다."
 
-# print(my_str)
-# sendMessage(my_str, "최근 7일 데이터 업데이트 알림")
+print(my_str)
+sendMessage(my_str, "최근 7일 데이터 업데이트 알림")
