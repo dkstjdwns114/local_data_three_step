@@ -82,8 +82,9 @@ def close(today_str, day1_str, day2_str, day3_str, day4_str, day5_str, day6_str,
         cnt = 0
         for item in jsonObj['rows']['row']:
             if item['dcbYmd'] == day1_str or item['dcbYmd'] == day2_str or item['dcbYmd'] == day3_str or item['dcbYmd'] == day4_str or item['dcbYmd'] == day5_str or item['dcbYmd'] == day6_str or item['dcbYmd'] == day7_str:
-                is_exist = local_realtime_close.find_one(
-                    {"$and": [{"mgtNo": item['mgtNo']}, {"store_name": item['bplcNm']}]})
+                # is_exist = local_realtime_close.find_one(
+                #     {"$and": [{"mgtNo": item['mgtNo']}, {"store_name": item['bplcNm']}]})
+                is_exist = None
                 if is_exist is None:
                     cnt += 1
                     city_name = ""
@@ -174,7 +175,7 @@ def close(today_str, day1_str, day2_str, day3_str, day4_str, day5_str, day6_str,
                         "category_kor": category_kor,
                     }
                     print(cnt, "close", info)
-                    local_real_time_close_id = local_realtime_close.insert_one(info).inserted_id
+                    # local_real_time_close_id = local_realtime_close.insert_one(info).inserted_id
     return cnt
 
 
@@ -216,8 +217,9 @@ def today_open(day1_str, day7_str):
             if jsonPageObj['totalCount'] == '1':
                 isOne = True
                 item = jsonObj['rows']['row']
-            is_exist = local_realtime_open.find_one(
-                {"$and": [{"mgtNo": item['mgtNo']}, {"store_name": item['bplcNm']}]})
+            # is_exist = local_realtime_open.find_one(
+            #     {"$and": [{"mgtNo": item['mgtNo']}, {"store_name": item['bplcNm']}]})
+            is_exist = None
             if is_exist is None:
                 cnt += 1
                 city_name = ""
@@ -309,7 +311,7 @@ def today_open(day1_str, day7_str):
                 }
 
                 print(cnt, "open", info)
-                local_real_time_open_id = local_realtime_open.insert_one(info).inserted_id
+                # local_real_time_open_id = local_realtime_open.insert_one(info).inserted_id
                 if isOne:
                     break
     return cnt
